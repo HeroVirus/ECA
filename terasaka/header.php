@@ -78,9 +78,22 @@
               </div>
             </li>
             <li class="navi-list-item navi-list-items no-sp">
-              <a href="<?php echo home_url(); ?>/contents" class="navi-list-link-block w-inline-block">
-                <p class="navi-list-link-block-p">診療内容</p>
-              </a>
+              <div class="navi-list-link-block w-inline-block">
+                <a href="#/" class="navi-list-link-block w-inline-block" style="pointer-events: none;">
+                  <p class="navi-list-link-block-p navi-pulldown-list"><span>診療内容</span></p>
+                </a>
+                <div class="navi-pulldown-listbox">
+                  <ul>
+                    <li><a href="<?php echo home_url(); ?>/contents#contents01">- 一般内科</a></li>
+                    <li><a href="<?php echo home_url(); ?>/contents#contents07">- 発熱外来</a></li>
+                    <li><a href="<?php echo home_url(); ?>/contents#contents02">- 糖尿病内科</a></li>
+                    <li><a href="<?php echo home_url(); ?>/contents#contents03">- 外科</a></li>
+                    <li><a href="<?php echo home_url(); ?>/contents#contents04">- 移植外科</a></li>
+                    <li><a href="<?php echo home_url(); ?>/contents#contents05">- 予防接種</a></li>
+                    <li><a href="<?php echo home_url(); ?>/contents#contents06">- 健康診断</a></li>
+                  </ul>
+                </div>
+              </div>
             </li>
             <li class="navi-list-item">
               <a href="<?php echo home_url(); ?>/introduction" class="navi-list-link-block w-inline-block">
