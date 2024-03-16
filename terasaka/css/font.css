@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Noto Sans JP';
+    src: url('../font/NotoSansJP-Regular.woff2') format('woff2'),
+         url('../font/NotoSansJP-SemiBold.woff2') format('woff2')
+  }
+  @font-face {
+    font-family: 'Noto Serif JP';
+    src: url('../font/NotoSerifJP-SemiBold.woff2') format('woff2')
+  }
+  
