@@ -7,8 +7,13 @@
 # you can delete this whole section/until Configuration.
 /wp-admin/
 /wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
+/wp-content/languages/
+/wp-content/ai1wm-backups/
+/wp-content/ewww/
+/wp-content/plugins/
+/wp-content/upgrade/
+/wp-content/upgrade-temp-backup/
+/wp-content/uploads/
 /wp-content/themes/index.php
 /wp-includes/
 /index.php
@@ -20,20 +25,14 @@
 # Configuration
 wp-config.php
 
-# Example themes
-/wp-content/themes/twenty*/
-
-# Example plugin
-/wp-content/plugins/hello.php
-
-# Uploads
-/wp-content/uploads/
-
 # Log files
 *.log
 
 # htaccess
 /.htaccess
+
+# assets
+/css/sourcemaps/
 
 # All plugins
 #
@@ -52,3 +51,8 @@ font/
 images/
 pdf/
 .DS_Store
+
+##Local Sitesのファイル
+logs
+conf
+sql
