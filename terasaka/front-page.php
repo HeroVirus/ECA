@@ -13,12 +13,12 @@
       class="home-mainvisual-green-ribbon" src="<?php echo get_template_directory_uri(); ?>/images/Top_Green.png" alt=""
       style="-webkit-transform:translate3d(-1920px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-1920px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-1920px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-1920px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
       sizes="100vw" data-w-id="fb9ff25b-f960-7011-6caf-aad2a86b6681" loading="lazy"
-      srcset="<?php echo get_template_directory_uri(); ?>/images/Top_Green-p-500.png 500w, <?php echo get_template_directory_uri(); ?>/images/Top_Green-p-800.png 800w, <?php echo get_template_directory_uri(); ?>/images/Top_Green-p-1080.png 1080w, <?php echo get_template_directory_uri(); ?>/images/Top_Green-p-1600.png 1600w, <?php echo get_template_directory_uri(); ?>/images/Top_Green.png 1920w"><img
-      class="home-mainvisual-doctors-image" src="<?php echo get_template_directory_uri(); ?>/images/tera_044_1.png"
-      alt=""
+      srcset="<?php echo get_template_directory_uri(); ?>/images/Top_Green-p-500.png 500w, <?php echo get_template_directory_uri(); ?>/images/Top_Green-p-800.png 800w, <?php echo get_template_directory_uri(); ?>/images/Top_Green-p-1080.png 1080w, <?php echo get_template_directory_uri(); ?>/images/Top_Green-p-1600.png 1600w, <?php echo get_template_directory_uri(); ?>/images/Top_Green.png 1920w">
+
+    <!-- <img class="home-mainvisual-doctors-image" src="<?php echo get_template_directory_uri(); ?>/images/tera_044_1.png"alt=""
       style="-webkit-transform:translate3d(120px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(120px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(120px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(120px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0"
       sizes="(max-width: 991px) 80vw, 52vw" data-w-id="1d05a749-0410-bdae-a902-5459b2ef5fc8" loading="lazy"
-      srcset="<?php echo get_template_directory_uri(); ?>/images/tera_044_1-p-500.png 500w, <?php echo get_template_directory_uri(); ?>/images/tera_044_1-p-800.png 800w, <?php echo get_template_directory_uri(); ?>/images/tera_044_1.png 960w">
+      srcset="<?php echo get_template_directory_uri(); ?>/images/tera_044_1-p-500.png 500w, <?php echo get_template_directory_uri(); ?>/images/tera_044_1-p-800.png 800w, <?php echo get_template_directory_uri(); ?>/images/tera_044_1.png 960w"> -->
   </div>
   <div data-w-id="0831c544-6ab5-fc79-3588-440f49f7f6b4"
     style="opacity:0;-webkit-transform:translate3d(-120px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-120px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-120px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-120px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
@@ -40,139 +40,139 @@
       $catslug = $cat[0]->slug;
       ?>
       <?php if (have_posts()): ?>
-        <ul role="list" class="home-info-list">
-          <?php while (have_posts()):
+      <ul role="list" class="home-info-list">
+        <?php while (have_posts()):
             the_post(); ?>
 
-            <li class="home-info-list-item">
-              <div class="home-info-list-item-detail">
-                <p class="home-info-list-date">
-                  <?php the_time('Y年m月j日'); ?>
-                </p>
-                <p class="home-info-list-category">
-                  <?php echo $catname; ?>
-                </p>
-              </div>
-              <a href="<?php the_permalink(); ?>" class="home-info-list-link w-inline-block">
-                <p class="home-info-list-posttitle">
-                  <?php if (wp_is_mobile()): ?>
-                    <?php echo wp_trim_words(get_the_title(), 12, '...'); ?>
-                  <?php else: ?>
-                    <?php echo wp_trim_words(get_the_title(), 25, '...'); ?>
-                  <?php endif; ?>
-                </p>
-              </a>
-            </li>
-          <?php endwhile; ?>
-        </ul>
+        <li class="home-info-list-item">
+          <div class="home-info-list-item-detail">
+            <p class="home-info-list-date">
+              <?php the_time('Y年m月j日'); ?>
+            </p>
+            <p class="home-info-list-category">
+              <?php echo $catname; ?>
+            </p>
+          </div>
+          <a href="<?php the_permalink(); ?>" class="home-info-list-link w-inline-block">
+            <p class="home-info-list-posttitle">
+              <?php if (wp_is_mobile()): ?>
+              <?php echo wp_trim_words(get_the_title(), 12, '...'); ?>
+              <?php else: ?>
+              <?php echo wp_trim_words(get_the_title(), 25, '...'); ?>
+              <?php endif; ?>
+            </p>
+          </a>
+        </li>
+        <?php endwhile; ?>
+      </ul>
       <?php else: ?>
-        <p>現在投稿記事はありません。</p>
+      <p>現在投稿記事はありません。</p>
       <?php endif; ?>
 
     </address>
     <div class="home-info-schedule">
       <div class="w-embed">
         <style>
+        .schedule-table {
+          border-collapse: separate;
+          border-spacing: 0px 10px;
+          width: 100%;
+          table-layout: fixed;
+          margin-bottom: 10px;
+        }
+
+        .schedule-table-title {
+          width: 240px;
+          padding-bottom: 6px;
+        }
+
+        .schedule-table-head {
+          font-weight: 600;
+          padding-bottom: 6px;
+        }
+
+        .schedule-table-time {
+          padding: 16px 20px 16px 32px;
+          font-size: 20px;
+          color: #709BB0;
+          text-align: center;
+          background-color: #FFFFFF;
+          border-radius: 60px 0px 0px 60px;
+        }
+
+        .schedule-table-icon {
+          padding: 14px 0px 14px 0px;
+          font-size: 22px;
+          color: #709BB0;
+          background-color: #FFFFFF;
+        }
+
+        .last-round-background {
+          border-radius: 0px 60px 60px 0px;
+        }
+
+        .sunday {
+          width: 12%;
+        }
+
+        .small {
+          font-size: 14px;
+          color: #2A3036;
+        }
+
+        @media screen and (max-width:768px) {
           .schedule-table {
-            border-collapse: separate;
-            border-spacing: 0px 10px;
-            width: 100%;
-            table-layout: fixed;
-            margin-bottom: 10px;
+            margin-bottom: 4px;
           }
 
           .schedule-table-title {
-            width: 240px;
-            padding-bottom: 6px;
-          }
-
-          .schedule-table-head {
-            font-weight: 600;
-            padding-bottom: 6px;
+            width: 220px;
           }
 
           .schedule-table-time {
-            padding: 16px 20px 16px 32px;
-            font-size: 20px;
-            color: #709BB0;
-            text-align: center;
-            background-color: #FFFFFF;
-            border-radius: 60px 0px 0px 60px;
+            font-size: 18px;
           }
 
           .schedule-table-icon {
-            padding: 14px 0px 14px 0px;
-            font-size: 22px;
-            color: #709BB0;
-            background-color: #FFFFFF;
+            font-size: 18px;
           }
 
-          .last-round-background {
-            border-radius: 0px 60px 60px 0px;
-          }
-
-          .sunday {
-            width: 12%;
-          }
+          .last-round-background {}
 
           .small {
+            font-size: 12px;
+          }
+        }
+
+        @media screen and (max-width:480px) {
+          .schedule-table {
+            margin-bottom: 2px;
+          }
+
+          .schedule-table-head {
             font-size: 14px;
-            color: #2A3036;
           }
 
-          @media screen and (max-width:768px) {
-            .schedule-table {
-              margin-bottom: 4px;
-            }
-
-            .schedule-table-title {
-              width: 220px;
-            }
-
-            .schedule-table-time {
-              font-size: 18px;
-            }
-
-            .schedule-table-icon {
-              font-size: 18px;
-            }
-
-            .last-round-background {}
-
-            .small {
-              font-size: 12px;
-            }
+          .schedule-table-title {
+            width: 130px;
+            font-size: 14px;
           }
 
-          @media screen and (max-width:480px) {
-            .schedule-table {
-              margin-bottom: 2px;
-            }
-
-            .schedule-table-head {
-              font-size: 14px;
-            }
-
-            .schedule-table-title {
-              width: 130px;
-              font-size: 14px;
-            }
-
-            .schedule-table-time {
-              padding: 8px 0px 8px 4px;
-              font-size: 16px;
-            }
-
-            .schedule-table-icon {
-              font-size: 14px;
-            }
-
-            .last-round-background {}
-
-            .small {
-              font-size: 12px;
-            }
+          .schedule-table-time {
+            padding: 8px 0px 8px 4px;
+            font-size: 16px;
           }
+
+          .schedule-table-icon {
+            font-size: 14px;
+          }
+
+          .last-round-background {}
+
+          .small {
+            font-size: 12px;
+          }
+        }
         </style>
         <table class="schedule-table">
           <tr class="tr">
